@@ -1,0 +1,29 @@
+{
+    "measurements": [
+      {
+        "temperature": {
+          "value": 25.5,
+          "unit": "Celsius"
+        },
+        "humidity": {
+          "value": 60,
+          "unit": "Percent"
+        },
+        "timestamp": "2023-12-07T12:30:00",
+        "weather": "Sunny"
+      },
+      {
+        "temperature": {
+          "value": 28.2,
+          "unit": "Celsius"
+        },
+        "humidity": {
+          "value": 55,
+          "unit": "Percent"
+        },
+        "timestamp": "2023-12-07T13:00:00",
+        "weather": "Partly Cloudy"
+      }
+    ]
+  }
+  
