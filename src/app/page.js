@@ -10,7 +10,7 @@ import { promises as fs } from 'fs';
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + '/src/app/files/data.json', 'utf8');
   const data = JSON.parse(file);
-  console.log(data);
+  console.log(data.measurements[0].temperature);
 
   return (
     <main className="min-h-screen">
