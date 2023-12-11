@@ -4,23 +4,28 @@ import GraphTemp from './graphs/graphTemp';
 import GraphIrradiance from './graphs/graphIrradiance';
 import GraphHumidity from './graphs/graphHumidity';
 import Header from './globalComponents/header';
+import Footer from './globalComponents/footer';
 import { promises as fs } from 'fs';
 
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + '/src/app/files/data.json', 'utf8');
   const data = JSON.parse(file);
-  console.log(data.measurements[0].temperature);
+  const temperatures = data.measurements.map(measurement => measurement.temperature);
+  const winds = data.measurements.map(measurement => measurement.temperature);
+  const irradiances = data.measurements.map(measurement => measurement.irradiance);
+  const humidities = data.measurements.map(measurement => measurement.humidity);
 
   return (
-    <main className="min-h-screen">
+    <main className="dark:bg-gray-800">
       <Header/>
-      <div className='justify-center w-full md:col-span-2 lg:h-[78vh] h-[58vh] m-auto px-24 py-8 bg-white flex flex-wrap'>
-        <GraphWind/>
-        <GraphTemp/>
-        <GraphIrradiance/>
-        <GraphHumidity/>
+      <div className='justify-center w-full md:col-span-2 m-auto px-24 py-8 bg-white flex flex-wrap dark:bg-gray-800'>
+        <GraphWind winds={winds}/>
+        <GraphTemp temperatures={temperatures}/>
+        <GraphIrradiance irradiances={irradiances}/>
+        <GraphHumidity humidities={humidities}/>
       </div>
+      <Footer/>
     </main>
   );
 }

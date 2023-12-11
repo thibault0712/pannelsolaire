@@ -25,7 +25,7 @@ ChartJS.register(
   Legend
 )
 
-export default function GraphWind() {
+export default function GraphWind(_winds) {
   const [chartData, setChartData] = useState({
     datasets: [],
   })
@@ -33,13 +33,15 @@ export default function GraphWind() {
 
   })
 
+  const winds = Object.values(_winds)[0];
+
   useEffect(() => {
     setChartData({
       labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
       datasets: [
         {
-          label: 'Sales $',
-          data: [180, 28, 90, 100, 85, 92, 80],
+          label: 'Vent',
+          data: winds,
           borderColor: 'rgb(53, 162, 235)',
           backgroundColor: 'rgb(53, 162, 235, 0.4)',
           fill: false, // Cette propriété indique que le graphique ne doit pas être rempli
@@ -65,7 +67,7 @@ export default function GraphWind() {
 
   return (
     <>
-        <div className='p-8 h-min w-96 lg:w-2/5 rounded-xl border border-gray-300 mx-6 mb-6'>
+        <div className='p-8 h-auto w-96 lg:w-2/5 rounded-xl border border-gray-300 mx-6 mb-6 dark:bg-gray-700'>
             <h1 className='text-center font-bold text-2xl mb-3'>Vent</h1>
             <Line data={chartData} options={chartOptions}/>
         </div>

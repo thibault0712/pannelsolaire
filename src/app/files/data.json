@@ -1,33 +1,74 @@
 {
-    "measurements": [
-      {
-        "temperature": 20.5,
-        "timestamp": "2023-12-07T12:30:00",
-        "weather": 20,
-        "humidity": 10,
-        "solar": 20
-      },
-      {
-        "temperature": 20.5,
-        "timestamp": "2023-12-07T12:30:00",
-        "weather": 20,
-        "humidity": 10,
-        "solar": 20
-      },
-      {
-        "temperature": 20.5,
-        "timestamp": "2023-12-07T12:30:00",
-        "weather": 20,
-        "humidity": 10,
-        "solar": 20
-      },
-      {
-        "temperature": 20.5,
-        "timestamp": "2023-12-07T12:30:00",
-        "weather": 20,
-        "humidity": 10,
-        "solar": 20
-      }
-    ]
-  }
-  
+  "measurements": [
+    {
+      "temperature": 22.0,
+      "timestamp": "2023-12-07T12:30:00",
+      "weather": 22,
+      "humidity": 50,
+      "irradiance": 400
+    },
+    {
+      "temperature": 23.5,
+      "timestamp": "2023-12-07T13:30:00",
+      "weather": 24,
+      "humidity": 48,
+      "irradiance": 420
+    },
+    {
+      "temperature": 21.8,
+      "timestamp": "2023-12-07T14:30:00",
+      "weather": 20,
+      "humidity": 55,
+      "irradiance": 380
+    },
+    {
+      "temperature": 24.2,
+      "timestamp": "2023-12-07T15:30:00",
+      "weather": 26,
+      "humidity": 45,
+      "irradiance": 450
+    },
+    {
+      "temperature": 22.5,
+      "timestamp": "2023-12-07T16:30:00",
+      "weather": 23,
+      "humidity": 52,
+      "irradiance": 410
+    },
+    {
+      "temperature": 25.0,
+      "timestamp": "2023-12-07T17:30:00",
+      "weather": 28,
+      "humidity": 40,
+      "irradiance": 480
+    },
+    {
+      "temperature": 20.5,
+      "timestamp": "2023-12-07T18:30:00",
+      "weather": 19,
+      "humidity": 60,
+      "irradiance": 350
+    },
+    {
+      "temperature": 22.8,
+      "timestamp": "2023-12-07T19:30:00",
+      "weather": 25,
+      "humidity": 38,
+      "irradiance": 430
+    },
+    {
+      "temperature": 21.0,
+      "timestamp": "2023-12-07T20:30:00",
+      "weather": 20,
+      "humidity": 58,
+      "irradiance": 360
+    },
+    {
+      "temperature": 23.3,
+      "timestamp": "2023-12-07T21:30:00",
+      "weather": 27,
+      "humidity": 42,
+      "irradiance": 440
+    }
+  ]
+}
