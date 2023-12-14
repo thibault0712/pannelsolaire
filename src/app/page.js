@@ -18,7 +18,7 @@ export default async function Home() {
 
   return (
     <main className="dark:bg-gray-800">
-      <Header/>
+      <Header logo='Home'/>
       <div className='justify-center w-full md:col-span-2 m-auto px-24 py-8 bg-white flex flex-wrap dark:bg-gray-800'>
         <GraphWind winds={winds}/>
         <GraphTemp temperatures={temperatures}/>

@@ -35,7 +35,7 @@ export default function GraphHumidity(_humidities) {
 
   useEffect(() => {
     setChartData({
-      labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+      labels: ['Lun', 'Mar', 'Mer', 'Jeudi', 'Ven', 'Sam', 'Dim'],
       datasets: [
         {
           label: 'Humidité',
