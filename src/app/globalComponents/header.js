@@ -20,7 +20,7 @@ export default function Header(data) {
         <div className='flex md:mx-96 h-14 border-gray-300 dark:bg-gray-700 rounded-xl border'>
           <div className='m-auto flex'>
             {iconComponent}
-          <p flex className='text-center font-bold text-2xl'>
+          <p className='text-center font-bold text-2xl'>
             {title}
           </p>
           </div>
