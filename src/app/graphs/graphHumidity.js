@@ -1,7 +1,8 @@
 "use client";
-
 import React, {useState, useEffect} from 'react'
 import { Line } from 'react-chartjs-2';
+import sorterWeek from '@/app/sorters/sorterWeek'
+
 import{
   Chart as ChartJS,
   CategoryScale,
@@ -23,7 +24,7 @@ ChartJS.register(
   Legend
 )
 
-export default function GraphHumidity(_humidities) {
+export default function GraphHumidity(_data) {
   const [chartData, setChartData] = useState({
     datasets: [],
   })
@@ -31,7 +32,9 @@ export default function GraphHumidity(_humidities) {
 
   })
 
-  const humidities = Object.values(_humidities)[0];
+  const data = Object.values(_data)[0];
+  const allTimestamps = data.map(__data => new Date(__data.timestamp));
+  const maxDate = new Date(Math.max(...allTimestamps));
 
   useEffect(() => {
     setChartData({
@@ -39,7 +42,7 @@ export default function GraphHumidity(_humidities) {
       datasets: [
         {
           label: 'Humidité',
-          data: humidities,
+          data: sorterWeek(data, maxDate),
           borderColor: 'rgb(53, 162, 235)',
           backgroundColor: 'rgb(53, 162, 235, 0.4)',
           fill: false, // Cette propriété indique que le graphique ne doit pas être rempli
@@ -59,7 +62,7 @@ export default function GraphHumidity(_humidities) {
         }
       },
       maintainAspectRatio: false,
-      responsive: true
+      responsive: false
     })
   }, [])
 

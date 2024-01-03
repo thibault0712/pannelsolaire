@@ -2,6 +2,7 @@
 
 import React, {useState, useEffect} from 'react'
 import { Line } from 'react-chartjs-2';
+import sorterWeek from '@/app/sorters/sorterWeek'
 import{
   Chart as ChartJS,
   CategoryScale,
@@ -25,7 +26,7 @@ ChartJS.register(
   Legend
 )
 
-export default function GraphWind(_winds) {
+export default function GraphWind(_data) {
   const [chartData, setChartData] = useState({
     datasets: [],
   })
@@ -33,15 +34,18 @@ export default function GraphWind(_winds) {
 
   })
 
-  const winds = Object.values(_winds)[0];
+  const data = Object.values(_data)[0];
+  const allTimestamps = data.map(__data => new Date(__data.timestamp));
+  const maxDate = new Date(Math.max(...allTimestamps));
+  console.log(data)
 
   useEffect(() => {
     setChartData({
-      labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+      labels: ['Lun', 'Mar', 'Mer', 'Jeudi', 'Ven', 'Sam', 'Dim'],
       datasets: [
         {
           label: 'Vent',
-          data: winds,
+          data: sorterWeek(data, maxDate),
           borderColor: 'rgb(53, 162, 235)',
           backgroundColor: 'rgb(53, 162, 235, 0.4)',
           fill: false, // Cette propriété indique que le graphique ne doit pas être rempli
@@ -61,7 +65,7 @@ export default function GraphWind(_winds) {
         },
       },
       maintainAspectRatio: false,
-      responsive: true
+      responsive: false
     })
   }, [])
 

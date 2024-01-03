@@ -7,14 +7,13 @@ import Header from './globalComponents/header';
 import Footer from './globalComponents/footer';
 import { promises as fs } from 'fs';
 
-
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + '/src/app/files/data.json', 'utf8');
   const data = JSON.parse(file);
-  const temperatures = data.measurements.map(measurement => measurement.temperature);
-  const winds = data.measurements.map(measurement => measurement.temperature);
-  const irradiances = data.measurements.map(measurement => measurement.irradiance);
-  const humidities = data.measurements.map(measurement => measurement.humidity);
+  const winds = data.measurements.map(measurement => ({ value: measurement.wind, timestamp: measurement.timestamp }));
+  const temperatures = data.measurements.map(measurement => ({ value: measurement.temperature, timestamp: measurement.timestamp }));
+  const irradiances = data.measurements.map(measurement => ({ value: measurement.irradiance, timestamp: measurement.timestamp }));
+  const humidities = data.measurements.map(measurement => ({ value: measurement.humidity, timestamp: measurement.timestamp }));
 
   return (
     <main className="dark:bg-gray-800">

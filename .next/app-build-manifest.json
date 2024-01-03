@@ -1,0 +1,64 @@
+{
+  "pages": {
+    "/_not-found": [
+      "static/chunks/webpack-2d780df723bfdb40.js",
+      "static/chunks/fd9d1056-4b2c3529c0a2f3c1.js",
+      "static/chunks/472-7d4a2ec30f1ebc48.js",
+      "static/chunks/main-app-a1815346ececacaf.js",
+      "static/chunks/app/_not-found-f29c372dd14da0fe.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-2d780df723bfdb40.js",
+      "static/chunks/fd9d1056-4b2c3529c0a2f3c1.js",
+      "static/chunks/472-7d4a2ec30f1ebc48.js",
+      "static/chunks/main-app-a1815346ececacaf.js",
+      "static/css/c7d5a6119ff9db98.css",
+      "static/chunks/app/layout-6ca454765f3b44d0.js"
+    ],
+    "/menus/windMenu/page": [
+      "static/chunks/webpack-2d780df723bfdb40.js",
+      "static/chunks/fd9d1056-4b2c3529c0a2f3c1.js",
+      "static/chunks/472-7d4a2ec30f1ebc48.js",
+      "static/chunks/main-app-a1815346ececacaf.js",
+      "static/chunks/ca377847-77a13d8fd0e5661b.js",
+      "static/chunks/808-7a0608db5f12e50a.js",
+      "static/chunks/app/menus/windMenu/page-4ed21c88ae8207d5.js"
+    ],
+    "/menus/irradianceMenu/page": [
+      "static/chunks/webpack-2d780df723bfdb40.js",
+      "static/chunks/fd9d1056-4b2c3529c0a2f3c1.js",
+      "static/chunks/472-7d4a2ec30f1ebc48.js",
+      "static/chunks/main-app-a1815346ececacaf.js",
+      "static/chunks/ca377847-77a13d8fd0e5661b.js",
+      "static/chunks/808-7a0608db5f12e50a.js",
+      "static/chunks/app/menus/irradianceMenu/page-dc58fabe212f0123.js"
+    ],
+    "/menus/temperatureMenu/page": [
+      "static/chunks/webpack-2d780df723bfdb40.js",
+      "static/chunks/fd9d1056-4b2c3529c0a2f3c1.js",
+      "static/chunks/472-7d4a2ec30f1ebc48.js",
+      "static/chunks/main-app-a1815346ececacaf.js",
+      "static/chunks/ca377847-77a13d8fd0e5661b.js",
+      "static/chunks/808-7a0608db5f12e50a.js",
+      "static/chunks/app/menus/temperatureMenu/page-80faec25ba8195e3.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-2d780df723bfdb40.js",
+      "static/chunks/fd9d1056-4b2c3529c0a2f3c1.js",
+      "static/chunks/472-7d4a2ec30f1ebc48.js",
+      "static/chunks/main-app-a1815346ececacaf.js",
+      "static/chunks/ca377847-77a13d8fd0e5661b.js",
+      "static/chunks/808-7a0608db5f12e50a.js",
+      "static/chunks/app/page-55c8a98ee389e73a.js"
+    ],
+    "/menus/humidityMenu/page": [
+      "static/chunks/webpack-2d780df723bfdb40.js",
+      "static/chunks/fd9d1056-4b2c3529c0a2f3c1.js",
+      "static/chunks/472-7d4a2ec30f1ebc48.js",
+      "static/chunks/main-app-a1815346ececacaf.js",
+      "static/chunks/ca377847-77a13d8fd0e5661b.js",
+      "static/chunks/808-7a0608db5f12e50a.js",
+      "static/chunks/app/menus/humidityMenu/page-b393967fe8f77fc2.js"
+    ]
+  }
+}

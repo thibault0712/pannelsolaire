@@ -1,0 +1,10 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/menus/windMenu/page": "app/menus/windMenu/page.js",
+  "/menus/irradianceMenu/page": "app/menus/irradianceMenu/page.js",
+  "/pictures/icon.png/route": "app/pictures/icon.png/route.js",
+  "/menus/temperatureMenu/page": "app/menus/temperatureMenu/page.js",
+  "/page": "app/page.js",
+  "/menus/humidityMenu/page": "app/menus/humidityMenu/page.js"
+}

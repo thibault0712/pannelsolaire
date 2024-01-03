@@ -1,4 +1,5 @@
-import { FaHome, FaWind } from 'react-icons/fa';
+import { FaHome, FaSun, FaThermometerHalf, FaWind } from 'react-icons/fa';
+import { WiHumidity } from 'react-icons/wi';
 
 export default function Header(data) {
   let iconComponent;
@@ -12,6 +13,18 @@ export default function Header(data) {
     case 'Wind':
       iconComponent = <FaWind className='mr-4 m-auto w-6 h-auto'></FaWind>;
       title = "vent";
+      break;
+    case 'Irradiance':
+      iconComponent = <FaSun className='mr-4 m-auto w-6 h-auto'></FaSun>;
+      title = "irradiance";
+      break;
+    case 'Temperature':
+      iconComponent = <FaThermometerHalf className='mr-4 m-auto w-6 h-auto'></FaThermometerHalf>;
+      title = "température";
+      break;
+    case 'Humidity':
+      iconComponent = <WiHumidity className='mr-4 m-auto w-8 h-auto'></WiHumidity>;
+      title = "humidité";
       break;
   }
 

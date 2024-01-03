@@ -1,7 +1,7 @@
 "use client";
-
 import React, {useState, useEffect} from 'react'
 import { Line } from 'react-chartjs-2';
+import sorterWeek from '@/app/sorters/sorterWeek'
 import{
   Chart as ChartJS,
   CategoryScale,
@@ -23,7 +23,7 @@ ChartJS.register(
   Legend
 )
 
-export default function GraphIrradiance(_irradiances) {
+export default function GraphIrradiance(_data) {
   const [chartData, setChartData] = useState({
     datasets: [],
   })
@@ -31,15 +31,17 @@ export default function GraphIrradiance(_irradiances) {
 
   })
 
-  const irradiances = Object.values(_irradiances)[0];
+  const data = Object.values(_data)[0];
+  const allTimestamps = data.map(__data => new Date(__data.timestamp));
+  const maxDate = new Date(Math.max(...allTimestamps));
 
   useEffect(() => {
     setChartData({
-      labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+      labels: ['Lun', 'Mar', 'Mer', 'Jeudi', 'Ven', 'Sam', 'Dim'],
       datasets: [
         {
           label: 'Irradiance',
-          data: irradiances,
+          data: sorterWeek(data, maxDate),
           borderColor: 'rgb(53, 162, 235)',
           backgroundColor: 'rgb(53, 162, 235, 0.4)',
           fill: false, // Cette propriété indique que le graphique ne doit pas être rempli
@@ -59,7 +61,7 @@ export default function GraphIrradiance(_irradiances) {
         },
       },
       maintainAspectRatio: false,
-      responsive: true
+      responsive: false
     })
   }, [])
 

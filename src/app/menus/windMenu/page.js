@@ -7,7 +7,7 @@ import GraphWind from "./windGraph";
 export default async function WindMenu(){
     const file = await fs.readFile(process.cwd() + '/src/app/files/data.json', 'utf8');
     const data = JSON.parse(file);
-    const winds = data.measurements.map(measurement => measurement.temperature);
+    const winds = data.measurements.map(measurement => ({ value: measurement.wind, timestamp: measurement.timestamp }));
 
 
     return(
