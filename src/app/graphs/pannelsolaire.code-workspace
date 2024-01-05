@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"name": "pannelSolaire",
+			"path": "../../../../../PlatformIO/Projects/pannelSolaire"
+		}
+	],
+	"settings": {}
+}

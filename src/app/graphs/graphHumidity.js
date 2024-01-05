@@ -2,50 +2,28 @@
 import React, {useState, useEffect} from 'react'
 import { Line } from 'react-chartjs-2';
 import sorterWeek from '@/app/sorters/sorterWeek'
+import{ Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend} from 'chart.js'
 
-import{
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js'
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Title,
-  Tooltip,
-  Legend
-)
+ChartJS.register(CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend)
 
 export default function GraphHumidity(_data) {
   const [chartData, setChartData] = useState({
     datasets: [],
   })
-  const [chartOptions, setChartOptions] = useState({
-
-  })
-
+  const [chartOptions, setChartOptions] = useState()
   const data = Object.values(_data)[0];
   const allTimestamps = data.map(__data => new Date(__data.timestamp));
   const maxDate = new Date(Math.max(...allTimestamps));
 
   useEffect(() => {
     setChartData({
-      labels: ['Lun', 'Mar', 'Mer', 'Jeudi', 'Ven', 'Sam', 'Dim'],
+      labels: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
       datasets: [
         {
           label: 'Humidité',
           data: sorterWeek(data, maxDate),
           borderColor: 'rgb(53, 162, 235)',
           backgroundColor: 'rgb(53, 162, 235, 0.4)',
-          fill: false, // Cette propriété indique que le graphique ne doit pas être rempli
         },
       ]
     })
@@ -56,9 +34,6 @@ export default function GraphHumidity(_data) {
         },
         title: {
           display: false
-        },
-        point: {
-          radius: 0, // Supprime les points sur la ligne
         }
       },
       maintainAspectRatio: false,
